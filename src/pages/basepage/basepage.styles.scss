@@ -1,6 +1,11 @@
 @import '../../ui_ux/main.scss';
 
 // @import NON JS Components
+@import '../../ui_ux/layout/container/container.scss';
+@import '../../ui_ux/layout/header/header.scss';
+@import '../../ui_ux/layout/content/content.scss';
+@import '../../ui_ux/layout/sidebar/sidebar.scss';
+@import '../../ui_ux/layout/hotel-view/hotel-view.scss';
 
 // uncomment if css is needed for basepage specific styles
 // $moduleName: 'basepage';

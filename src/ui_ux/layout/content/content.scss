@@ -1,0 +1,8 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'content';
+.#{$moduleName} {
+  &__base {
+    display: flex;
+  }
+}

@@ -1,0 +1,58 @@
+@use "sass:color";
+@import "./mixins";
+
+// colors
+$c-white:                         #ffffff;
+$c-cultured-light:                #faf9f9;
+$c-cultured-dark:                 #f4f2f2;
+
+$c-isabelline:                    #f0eeee;
+$c-light-grey:                    #ccc;
+
+$c-jet:                           #333;
+$c-sonic-silver:                  #777;
+$c-spanish-gray:                  #999;
+
+$c-black:                         #000000;
+
+$c-paradise-pink:                 #eb2f64;
+$c-radical-red:                   #FF3366;
+$c-maroon-x-11:                   #BA265D;
+
+// primary color gradient
+// TODO - updated the values
+// $c-primary:                     $c-paradise-pink;
+// $c-primary-light:               color.adjust($c-primary, $red: 140, $green: 123);
+// $c-primary-dark:                color.adjust($c-primary, $red: 111, $green: 101, $blue: -42);
+
+
+// sizes
+$basesize: 0.8rem;                 // 8px
+$gutter-vertical: 6rem;            // 60px
+$gutter-vertical-small: 4rem;      // 40px
+$gutter-horizontal: $basesize * 2; //16px 
+
+// font size
+$default-font-size: 1.6rem;        //16px
+
+:root {
+  --color-white: #{$c-white};
+
+  --color-primary: #{$c-paradise-pink};
+  --color-primary-light: #{$c-radical-red};
+  --color-primary-dark: #{$c-maroon-x-11};
+
+  --color-grey-light-1: #{$c-cultured-light};
+  --color-grey-light-2: #{$c-cultured-dark};
+  --color-grey-light-3: #{$c-isabelline};
+  --color-grey-light-4: #{$c-light-grey};
+  
+  --color-grey-dark-1: #{$c-jet};
+  --color-grey-dark-2: #{$c-sonic-silver};
+  --color-grey-dark-3: #{$c-spanish-gray};
+
+  --shadow-dark: 0 2rem 6rem rgba(#{$c-black}, .3);
+  --shadow-light: 0 2rem 5rem rgba(#{$c-black}, .06);
+
+  --line: 1px solid var(--color-grey-light-2);
+}

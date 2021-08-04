@@ -1,0 +1,13 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'container';
+.#{$moduleName} {
+  &__base {
+    max-width: 120rem;
+    margin: 8rem auto; // center the container inside of it's parent element
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+  }
+}

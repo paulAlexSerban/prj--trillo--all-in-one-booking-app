@@ -1,0 +1,9 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'hotel-view';
+.#{$moduleName} {
+  &__base {
+    background-color: var(--color-white);
+    flex: 1;
+  }
+}
