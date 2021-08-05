@@ -111,3 +111,9 @@
 - Use a CSS preprocessor
 - Less images
 - Compress images
+
+## NOTES
+- implemented webpack plugin `html-webpack-inline-svg-plugin` but does no work properly with  webpack@5 and `webpack-dev-server`
+  - ISSUE - when making changes on `*.scss` or `*.js` files the compiler starts but does not inject the SVG accordingly in the page
+  - issue is being worked on by plugin developers
+  - FALLBACK - do quick change in the `*.html` file

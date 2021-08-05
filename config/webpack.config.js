@@ -1,11 +1,12 @@
 const path = require("path");
 const glob = require("glob");
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const miniSVGDataURI = require("mini-svg-data-uri");
+const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
+
 
 let htmlPageNames = [];
 let htmlWebpackPluginPages = [];
@@ -24,10 +25,16 @@ const getEntries = () =>
           template: `./src/pages/${page}/${page}.html`,
           chunks: [`${page}`],
           inject: 'body',
+          hash: false,
           filename: `${page}.html`,
           meta: {
-            viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+            viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+
           },
+          base: {
+            'href': 'http://localhost',
+            'target': '_blank'
+          }
         })
       )
     );
@@ -37,14 +44,18 @@ const getEntries = () =>
 module.exports = {
   entry: getEntries(),
   devServer: {
-    contentBase: './dist',
-    port: 9000,
-    index: 'basepage.html'
-    },
+    contentBase: "./dist",
+    port: 8000,
+    index: "basepage.html",
+    hot: true,
+    writeToDisk: true,
+  },
   output: {
-    filename: "scripts/[name].[contenthash].scripts.js",
+    filename: "scripts/[name].scripts.js",
     path: path.resolve(__dirname, "../dist"),
-    assetModuleFilename: 'asstes/[name][ext]'
+    assetModuleFilename: "assets/[name][ext]",
+    clean: true,
+    compareBeforeEmit: false
   },
   optimization: {
     minimize: true,
@@ -57,18 +68,18 @@ module.exports = {
         test: /\.(css|sass|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { 
+          {
             loader: "css-loader",
             options: {
               importLoaders: 2,
               sourceMap: true,
-              url: true
+              url: true,
             },
           },
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true
+              sourceMap: true,
             },
           },
         ],
@@ -86,42 +97,36 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        enforce: 'pre',
-        use: ["source-map-loader"]
+        enforce: "pre",
+        use: ["source-map-loader"],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|webm|mp4)$/i,
-        type: 'asset/resource'
+        test: /\.(png|jpg|jpeg|gif|webm|mp4|woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)(\?v=\d+\.\d+\.\d+)$/i,
-        type: 'asset/resource'
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'svgs/[name][ext]'
+        }
       },
       {
         test: /\.html$/i,
         loader: "html-loader",
-        options: {
-          sources: true
-        }
       },
-      {
-        test: /\.svg$/,
-        type: 'asset/inline',
-        generator: {
-          dataUrl(content) {
-            content = content.toString();
-            return miniSVGDataURI(content)
-          }
-        },
-        use: 'svgo-loader'
-      }
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].styles.css",
+      filename: "styles/[name].styles.css",
     }),
     new CleanWebpackPlugin(),
-    ...htmlWebpackPluginPages
+    ...htmlWebpackPluginPages,
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProgressPlugin(),
+    new HtmlWebpackInlineSVGPlugin({
+      inlineAll: true
+    })
   ],
 };
