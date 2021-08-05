@@ -1,0 +1,21 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'search';
+.#{$moduleName} {
+  &__base {
+    
+  }
+
+  &__input {
+
+  }
+
+  &__button {
+
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+}

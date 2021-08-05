@@ -1,0 +1,34 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'user-nav';
+.#{$moduleName} {
+  &__base {
+    
+  }
+
+  &__icon-box {
+
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  &__notification {
+
+  }
+
+  &__user {
+
+  }
+
+  &__user-photo {
+    border-radius: 50%;
+    height: 3.75rem;
+  }
+
+  &__user-name {
+    
+  }
+}
