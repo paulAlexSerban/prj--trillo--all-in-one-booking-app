@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const miniSVGDataURI = require("mini-svg-data-uri");
 
 let htmlPageNames = [];
 let htmlWebpackPluginPages = [];
@@ -89,7 +90,7 @@ module.exports = {
         use: ["source-map-loader"]
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|webm|mp4)$/i,
+        test: /\.(png|jpg|jpeg|gif|webm|mp4)$/i,
         type: 'asset/resource'
       },
       {
@@ -103,6 +104,17 @@ module.exports = {
           sources: true
         }
       },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
+        generator: {
+          dataUrl(content) {
+            content = content.toString();
+            return miniSVGDataURI(content)
+          }
+        },
+        use: 'svgo-loader'
+      }
     ],
   },
   plugins: [
