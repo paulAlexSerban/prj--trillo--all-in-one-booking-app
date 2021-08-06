@@ -30,10 +30,6 @@ const getEntries = () =>
           meta: {
             viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
 
-          },
-          base: {
-            'href': 'http://localhost',
-            'target': '_blank'
           }
         })
       )
