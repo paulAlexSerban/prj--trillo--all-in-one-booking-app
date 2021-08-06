@@ -3,6 +3,10 @@
 $moduleName: 'header';
 .#{$moduleName} {
   &__base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     height: 7rem;
     background-color: var(--color-white);
     border-bottom: var(--color-grey-light-2);
@@ -10,5 +14,6 @@ $moduleName: 'header';
 
   &__logo {
     height: 3.25rem;
+    margin-left: 3rem;
   }
 }
