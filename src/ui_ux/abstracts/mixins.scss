@@ -16,6 +16,14 @@
   }
 }
 
+@mixin inputPlaceholder() {
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
 $mobile : 0;
 $tablet: 426px;
 $desktop: 993px;
