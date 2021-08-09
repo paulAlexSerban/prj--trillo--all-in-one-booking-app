@@ -1,0 +1,25 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'button';
+.#{$moduleName} {
+  &__inline {
+    border:none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display:inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      color: var(--color-grey-dark-1);
+    }
+
+    &:focus {
+      outline: none;
+      animation: pulsate .75s infinite;
+    }
+  }
+}

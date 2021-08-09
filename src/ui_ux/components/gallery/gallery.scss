@@ -1,0 +1,13 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'gallery';
+.#{$moduleName} {
+  &__base {
+    display: flex;
+  }
+
+  &__photo {
+    width: 100%;
+    display:block;
+  }
+}

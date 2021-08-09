@@ -46,6 +46,9 @@ body {
 :root {
   --color-white: #{$c-white};
 
+  --color-black: #{$c-black};
+  --color-black-25: #{$c-black-25};
+
   --color-primary: #{$c-paradise-pink};
   --color-primary-light: #{$c-radical-red};
   --color-primary-dark: #{$c-maroon-x-11};
