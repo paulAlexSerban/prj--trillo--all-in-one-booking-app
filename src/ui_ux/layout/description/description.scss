@@ -1,0 +1,14 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'description';
+.#{$moduleName} {
+  &__base {
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    font-size: 1.4rem;
+
+    background-color: var(--color-white);
+  }
+}
