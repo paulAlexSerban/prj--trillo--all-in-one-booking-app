@@ -5,7 +5,7 @@ $moduleName: 'overview';
   &__base {
     display: flex;
     align-items: center;
-    border-bottom: solid 1px var(--color-grey-light-2);
+    border-bottom: var(--line);
   }
 
   &__heading {

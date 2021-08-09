@@ -13,8 +13,11 @@ $c-jet:                           #333;
 $c-sonic-silver:                  #777;
 $c-spanish-gray:                  #999;
 
-$c-black:                         #000000;
+$c-black:                         rgb(0, 0, 0);
+$c-black-06:                      rgba($c-black, 0.06);
 $c-black-25:                      rgba($c-black, 0.25);
+$c-black-30:                      rgba($c-black, 0.30);
+
 
 $c-paradise-pink:                 #eb2f64;
 $c-radical-red:                   #FF3366;

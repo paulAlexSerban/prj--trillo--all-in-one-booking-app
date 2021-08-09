@@ -1,0 +1,9 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'user-reviews';
+.#{$moduleName} {
+  &__base {
+    flex: 1;
+    background-color: yellowgreen;
+  }
+}
