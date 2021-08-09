@@ -3,6 +3,7 @@
 $moduleName: 'header';
 .#{$moduleName} {
   &__base {
+    font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +15,6 @@ $moduleName: 'header';
 
   &__logo {
     height: 3.25rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 }

@@ -33,6 +33,11 @@ $moduleName: 'search';
         background-color: var(--color-grey-light-3);
       }
     }
+
+    @include inputPlaceholder() {
+      font-weight: 100;
+      color: var(--color-grey-light-3);
+    }
   }
 
   &__button {
