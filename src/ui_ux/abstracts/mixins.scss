@@ -24,9 +24,10 @@
   }
 }
 
-$mobile : 0;
-$tablet: 426px;
-$desktop: 993px;
+$mobile-xs: 500px;
+$mobile : 600px;
+$tablet: 900px;
+$desktop: 1101px;
 $desktop-lg: 1201px;
 
 @mixin respond($breakpoint) {
@@ -34,6 +35,16 @@ $desktop-lg: 1201px;
     // styles needed foe anything bigger than phone
     @media only screen and (max-width: $mobile),
           only screen and (hover: none) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-mobile-xs {
+    @media only screen and (min-width: $mobile-xs) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-mobile {
+    @media only screen and (min-width: $mobile) {
       @content;
     }
   }

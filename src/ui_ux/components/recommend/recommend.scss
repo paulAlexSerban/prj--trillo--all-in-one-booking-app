@@ -15,7 +15,7 @@ $moduleName: 'recommend';
   }
 
   &__friends {
-
+    display: flex;
   }
 
   &__photo {
@@ -26,7 +26,7 @@ $moduleName: 'recommend';
     border: 3px solid var(--color-white);
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }

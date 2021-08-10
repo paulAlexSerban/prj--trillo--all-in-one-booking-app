@@ -8,9 +8,17 @@ $moduleName: 'header';
     justify-content: space-between;
     align-items: center;
 
-    height: 7rem;
+    height: 11rem;
     background-color: var(--color-white);
     border-bottom: var(--line);
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    @include respond(min-mobile-xs) {
+      flex-wrap: nowrap;
+      height: 7rem;
+      align-content: stretch;
+    }
   }
 
   &__logo {

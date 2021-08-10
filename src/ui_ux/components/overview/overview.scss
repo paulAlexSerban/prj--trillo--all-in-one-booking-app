@@ -9,11 +9,16 @@ $moduleName: 'overview';
   }
 
   &__heading {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 1.5rem 3rem;
+    padding: 1.25rem 2rem;
+
+    @include respond(min-mobile) {
+      font-size: 2.25rem;
+      padding: 1.5rem 3rem;
+    }
   }
 
   &__stars {
@@ -42,20 +47,32 @@ $moduleName: 'overview';
     margin-left: 3rem;
     color: var(--color-grey-light-1);
     align-self: stretch;
-    padding: 0 2.25rem;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include respond(min-mobile) {
+      padding: 0 2.25rem;
+    }
   }
 
   &__rating-average {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     font-weight: 300;
+
+    @include respond(min-mobile) {
+      font-size: 2.25rem;
+    }
   }
 
   &__rating-count {
-    font-size: .8rem;
+    font-size: .5rem;
     text-transform: uppercase;
+
+    @include respond(min-mobile) {
+      font-size: .8rem;
+    }
   }
 }

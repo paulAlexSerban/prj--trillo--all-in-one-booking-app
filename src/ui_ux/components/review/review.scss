@@ -5,10 +5,15 @@ $moduleName: 'review';
   &__base {
     background-color: var(--color-white);
     box-shadow: var(--shadow-light);
-    padding: 3rem;
-    margin-bottom: 3.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+
+    @include respond(min-tab-port) {
+      padding: 3rem;
+      margin-bottom: 3rem;
+    }
 
     &::before {
       // for the quotation mark we use glyphs (CSS-Tricks html glyphs) using ISO num

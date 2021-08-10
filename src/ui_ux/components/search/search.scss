@@ -3,10 +3,18 @@
 $moduleName: 'search';
 .#{$moduleName} {
   &__base {
-    flex: 0 0 40%;
+    flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    order: 1;
+    background-color: var(--color-grey-light-2);
+
+    @include respond(min-mobile-xs) {
+      order: 0;
+      flex: 0 0 40%;
+      background-color: transparent;
+    }
   }
 
   &__input,

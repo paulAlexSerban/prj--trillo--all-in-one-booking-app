@@ -5,11 +5,23 @@ $moduleName: 'side-nav';
   &__base {
     font-size: 1.4rem;
     list-style: none;
-    margin-top: 3.5rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+
+    @include respond(min-tab-port) {
+      flex-direction: column;
+      margin-top: 3.5rem;
+    }
   }
 
   &__item {
     position: relative;
+    flex: 1;
+
+    @include respond(min-tab-port) {
+      flex: auto;
+    }
 
     &::before {
       content: '';
@@ -26,7 +38,11 @@ $moduleName: 'side-nav';
     }
 
     &:not(:last-child) {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
+
+      @include respond(min-tab-port) {
+        margin-bottom: 0.5rem;
+      }
     }
 
     &--isActive,
@@ -47,24 +63,43 @@ $moduleName: 'side-nav';
   &__link {
     &:link,
     &:visited {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
       color: var(--color-grey-light-1);
       text-decoration: none;
       text-transform: uppercase;
-      display: block;
-      padding: 1.5rem 3rem;
+      padding: 1.5rem .5rem;
       position: relative;
       z-index: 10;
 
-      display: flex;
-      align-items: center;
+      @include respond(min-mobile) {
+        flex-direction: row;
+        padding: 2rem;
+      }
+
+      @include respond(min-tab-port) {
+        justify-content: flex-start;
+        padding: 1.5rem 3rem;
+      }
     }
 
   }
 
   &__icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    margin-right: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0;
+    margin-bottom: .7rem;
     fill: currentColor;
+
+    @include respond(min-mobile) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
   }
 }
