@@ -1,6 +1,6 @@
 # Trillo All-in-One-Booking-App
 
-- A frictional All in One Booking app though which the user can book a hotel, a flight, a car and a tour, all in one platform
+- A fictional 'All in One Booking App' through which the user can book a hotel, a flight, a car and a tour, all in one platform.
 
 ## Used Front-end Concepts
 
