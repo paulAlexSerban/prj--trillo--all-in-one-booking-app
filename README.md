@@ -10,17 +10,21 @@
 - '7-1 Sass Architecture' folder structure adapted as per project requirements
 - BEM for CSS class naming convention and architecture
 - DRY coding principles
+
 ### Concepts
+
 #### SVG icons vs Font icons
-  > - icon fonts is just a hack to display icons, which are like images using
-  > - icon fonts fail more frequently that we are used to and display only a black square
-  > - screen readers fail to read icon-fonts
+
+> - icon fonts is just a hack to display icons, which are like images using
+> - icon fonts fail more frequently that we are used to and display only a black square
+> - screen readers fail to read icon-fonts
 
 ### Flexbox Layout
-  > - makes it easy to align elements to one another, in different directions and orders
-  > - the main idea is to give the container the ability to expand and shrink element to best use all available space
-  > - flexbox replaces float layouts, using less, and more readable logical code
-  > - flexbox can be easily used for one-dimensional layouts
+
+> - makes it easy to align elements to one another, in different directions and orders
+> - the main idea is to give the container the ability to expand and shrink element to best use all available space
+> - flexbox replaces float layouts, using less, and more readable logical code
+> - flexbox can be easily used for one-dimensional layouts
 
 ## Closely followed the pillars of GOOD HTML and CSS
 
@@ -111,9 +115,3 @@
 - Use a CSS preprocessor
 - Less images
 - Compress images
-
-## NOTES
-- implemented webpack plugin `html-webpack-inline-svg-plugin` but does no work properly with  webpack@5 and `webpack-dev-server`
-  - ISSUE - when making changes on `*.scss` or `*.js` files the compiler starts but does not inject the SVG accordingly in the page
-  - issue is being worked on by plugin developers
-  - FALLBACK - do quick change in the `*.html` file
