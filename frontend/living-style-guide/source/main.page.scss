@@ -1,0 +1,21 @@
+@import './base/all.scss';
+
+// @import NON JS Components
+@import './layout/container/container.scss';
+@import './layout/header/header.scss';
+@import './layout/content/content.scss';
+@import './layout/sidebar/sidebar.scss';
+@import './layout/hotel-view/hotel-view.scss';
+@import './layout/description/description.scss';
+@import './layout/user-reviews/user-reviews.scss';
+
+@import './components/search/search.scss';
+@import './components/user-nav/user-nav.scss';
+@import './components/side-nav/side-nav.scss';
+@import './components/gallery/gallery.scss';
+@import './components/overview/overview.scss';
+@import './components/button/button.scss';
+@import './components/list/list.scss';
+@import './components/recommend/recommend.scss';
+@import './components/review/review.scss';
+@import './components/cta/cta.scss';
