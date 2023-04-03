@@ -1,0 +1,69 @@
+@import "../abstracts/variables";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600";
+
+
+
+*,
+*::before,
+*::after {
+  // Remove browser margin and padding
+  margin: 0;
+  padding: 0;
+  // Change the box model so border and paddings are not added to the total width of the box container 
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 50%;                   // 1rem = 8px;  8/16 = 50%
+
+  @include respond(min-tab-port) {
+    font-size: 56.25%;              // 1rem = 9px;  9/16 = 56.25%
+  }
+
+  @include respond(min-desktop) {
+    font-size: 62.5%;               // 1rem = 10px; 10/16 = 62.5%
+  }
+
+  @include respond(min-desk-L) {
+    font-size: 75%;                 // 1rem = 12px; 12/16 = 75%
+  }
+}
+
+body {
+  // Set project wide font definition so it gets inherited in all child elements of the page
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
+
+:root {
+  --color-white: #{$c-white};
+
+  --color-black: #{$c-black};
+  --color-black-25: #{$c-black-25};
+
+  --color-primary: #{$c-paradise-pink};
+  --color-primary-light: #{$c-radical-red};
+  --color-primary-dark: #{$c-maroon-x-11};
+
+  --color-grey-light-1: #{$c-cultured-light};
+  --color-grey-light-2: #{$c-cultured-dark};
+  --color-grey-light-3: #{$c-isabelline};
+  --color-grey-light-4: #{$c-light-grey};
+  
+  --color-grey-dark-1: #{$c-jet};
+  --color-grey-dark-2: #{$c-sonic-silver};
+  --color-grey-dark-3: #{$c-spanish-gray};
+
+  --shadow-dark: 0 2rem 6rem #{$c-black-30};
+  --shadow-light: 0 2rem 5rem #{$c-black-06};
+
+  --line: 1px solid var(--color-grey-light-2);
+}

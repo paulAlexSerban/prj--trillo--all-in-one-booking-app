@@ -1,0 +1,78 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'overview';
+.#{$moduleName} {
+  &__base {
+    display: flex;
+    align-items: center;
+    border-bottom: var(--line);
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.25rem 2rem;
+
+    @include respond(min-mobile) {
+      font-size: 2.25rem;
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__star-icon,
+  &__location-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    vertical-align: center;
+  }
+  &__location-icon {
+    margin-right: .5rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: var(--color-grey-light-1);
+    align-self: stretch;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(min-mobile) {
+      padding: 0 2.25rem;
+    }
+  }
+
+  &__rating-average {
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    @include respond(min-mobile) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: .5rem;
+    text-transform: uppercase;
+
+    @include respond(min-mobile) {
+      font-size: .8rem;
+    }
+  }
+}

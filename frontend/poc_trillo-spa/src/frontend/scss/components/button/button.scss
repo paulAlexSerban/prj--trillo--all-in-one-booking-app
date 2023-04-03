@@ -1,0 +1,81 @@
+@import "../../abstracts/variables.scss";
+
+$moduleName: "button";
+.#{$moduleName} {
+  &__inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+
+    span {
+      margin-left: 3px;
+      transition: margin-left 0.2s;
+    }
+
+    &:hover {
+      color: var(--color-grey-dark-1);
+
+      span {
+        margin-left: 8px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      animation: pulsate 0.75s infinite;
+    }
+  }
+
+  &__cta {
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+
+    & > * {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      transition: all .35s; 
+    }
+
+    &--visible {
+      padding: 2rem 7.5rem;
+    }
+
+    &--hidden {
+      position: absolute;
+      left: 0;
+      top: -100%;
+      padding: 2rem 0;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover  &--visible {
+      transform: translateY(100%);
+    }
+
+    &:hover &--hidden {
+      top: 0;
+    }
+
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "sass:color";
+@import "./mixins";
+
+// colors
+$c-white:                         #ffffff;
+$c-cultured-light:                #faf9f9;
+$c-cultured-dark:                 #f4f2f2;
+
+$c-isabelline:                    #f0eeee;
+$c-light-grey:                    #ccc;
+
+$c-jet:                           #333;
+$c-sonic-silver:                  #777;
+$c-spanish-gray:                  #999;
+
+$c-black:                         rgb(0, 0, 0);
+$c-black-06:                      rgba($c-black, 0.06);
+$c-black-25:                      rgba($c-black, 0.25);
+$c-black-30:                      rgba($c-black, 0.30);
+
+
+$c-paradise-pink:                 #eb2f64;
+$c-radical-red:                   #FF3366;
+$c-maroon-x-11:                   #BA265D;
+
+// primary color gradient
+// TODO - updated the values
+// $c-primary:                     $c-paradise-pink;
+// $c-primary-light:               color.adjust($c-primary, $red: 140, $green: 123);
+// $c-primary-dark:                color.adjust($c-primary, $red: 111, $green: 101, $blue: -42);
+
+
+// sizes
+$basesize: 0.8rem;                 // 8px
+
+// font size
+$default-font-size: 1.6rem;        //16px

@@ -1,0 +1,7 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'main';
+.#{$moduleName} {
+  &__base {
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'container';
+.#{$moduleName} {
+  &__base {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    @include respond(min-desk-L) {
+      margin: 8rem auto; // center the container inside of it's parent element
+      max-width: 120rem;
+    }
+  }
+}

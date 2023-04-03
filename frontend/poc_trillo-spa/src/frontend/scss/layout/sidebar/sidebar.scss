@@ -1,0 +1,24 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'sidebar';
+.#{$moduleName} {
+  &__base {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+  }
+
+  &__legal {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--color-grey-light-4);
+    display: none;
+
+    @include respond(min-tab-port) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'content';
+.#{$moduleName} {
+  &__base {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(min-tab-port) {
+      flex-direction: row;
+    }
+  }
+}

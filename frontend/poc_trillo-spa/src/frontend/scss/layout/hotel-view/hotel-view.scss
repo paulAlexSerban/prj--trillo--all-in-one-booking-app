@@ -1,0 +1,26 @@
+@import '../../abstracts/variables.scss';
+
+$moduleName: 'hotel-view';
+.#{$moduleName} {
+  &__base {
+    background-color: var(--color-white);
+    flex: 1;
+  }
+
+  &__detail {
+    display: flex;
+    padding: 3rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+    font-size: 1.4rem;
+    flex-direction: column;
+
+    @include respond(min-mobile) {
+      flex-direction: row;
+    }
+
+    @include respond(min-tab-port) {
+      padding: 4.5rem;
+    }
+  }
+}
