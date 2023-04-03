@@ -4,7 +4,7 @@ cd "$(dirname "$0")" || exit
 
 source ../config.env
 
-echo "Install landing-ssg..."
+echo "Install poc_trillo-spa..."
 
 rm -rfv ../node_modules
 npm --prefix .. install

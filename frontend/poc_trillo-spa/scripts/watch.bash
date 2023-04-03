@@ -4,7 +4,7 @@ cd "$(dirname "$0")" || exit
 
 source ../config.env
 
-echo "Watching landing-ssg..."
+echo "Watching poc_trillo-spa..."
 
 if [ -d ../public ]; then
   echo "Removing old public folder..."

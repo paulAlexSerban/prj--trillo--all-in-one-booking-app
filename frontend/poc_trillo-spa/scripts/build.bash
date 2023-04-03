@@ -22,12 +22,12 @@ fi
 if [[ $ENV == "dev" ]]; then
   export SERVER_ENV="development"
 elif [[ $ENV == "gh_pages" ]]; then
-  export PUBLIC_PATH="/prj--natours-tours-agency/"
+  export PUBLIC_PATH="/prj--trillo--all-in-one-booking-app/"
 elif [[ $ENV == "prod" ]]; then
   export PUBLIC_PATH="/"
 fi
 
-echo "Building landing-ssg..."
+echo "Building poc_trillo-spa..."
 if [ -d ../public ]; then
   echo "Removing old public folder..."
   rm -rfv ../src/public

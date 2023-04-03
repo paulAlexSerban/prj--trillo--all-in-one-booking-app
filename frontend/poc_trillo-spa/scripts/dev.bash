@@ -4,6 +4,6 @@ cd "$(dirname "$0")" || exit
 
 source ../config.env
 
-echo "Dev landing-ssg..."
+echo "Dev poc_trillo-spa..."
 
 npm --prefix .. run dev

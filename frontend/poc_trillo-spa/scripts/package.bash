@@ -6,12 +6,12 @@ source ../config.env
 
 echo -e "📦  Package Landing SSG Website"
 
-mkdir -p ../../../package/landing-ssg
+mkdir -p ../../../package/poc_trillo-spa
 
 # Copy the output of the build into the package folder
-cp -rfv ../dist/* ../../../package/landing-ssg
+cp -rfv ../dist/* ../../../package/poc_trillo-spa
 
 # Make the package folder read-only
-chmod -R a-w ../../../package/landing-ssg
+chmod -R a-w ../../../package/poc_trillo-spa
 # Make the package folder executable
-chmod -R a+x ../../../package/landing-ssg
+chmod -R a+x ../../../package/poc_trillo-spa
