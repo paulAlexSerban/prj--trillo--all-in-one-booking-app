@@ -1,117 +1,71 @@
 # Trillo All-in-One-Booking-App
 
-- A fictional 'All in One Booking App' through which the user can book a hotel, a flight, a car and a tour, all in one platform.
+## Project Brief
 
-## Used Front-end Concepts
+Trillo is a fictional All-in-One Booking App that will allow users to book a hotel, a flight, a car, and a tour all in one platform. Currently, the project is in the frontend mockup stage, built using modern technologies and best practices in web development. The mockup is a single-page application that is fully responsive, accessible, and optimized for search engines.
 
-- SVG icons are implemented according to best practices
-- Flexbox Layout implemented
-- Component-based development
-- '7-1 Sass Architecture' folder structure adapted as per project requirements
-- BEM for CSS class naming convention and architecture
-- DRY coding principles
+## Goal Details
 
-### Concepts
+The goal of the Trillo project is to create a seamless booking experience for users who want to book multiple travel services in one place. The final version of the application will be developed using the MERN (MongoDB, Express, React, Node.js) stack and hosted on Amazon Web Services (AWS). The application should be visually appealing, user-friendly, and provide all necessary information to potential customers. The project aims to provide a high-quality user experience and follows a "Think-Build-Architect" mindset.
 
-#### SVG icons vs Font icons
+### Target Audience
 
-> - icon fonts is just a hack to display icons, which are like images using
-> - icon fonts fail more frequently that we are used to and display only a black square
-> - screen readers fail to read icon-fonts
+The target audience for Trillo is people who enjoy traveling and are interested in booking multiple travel services in one platform. This includes both local and international tourists who are looking for a convenient and hassle-free booking experience.
 
-### Flexbox Layout
+## Promise
 
-> - makes it easy to align elements to one another, in different directions and orders
-> - the main idea is to give the container the ability to expand and shrink element to best use all available space
-> - flexbox replaces float layouts, using less, and more readable logical code
-> - flexbox can be easily used for one-dimensional layouts
+Trillo promises to offer a comprehensive booking experience that allows customers to easily book multiple travel services in one place. The platform is designed to be user-friendly and efficient, providing customers with a stress-free booking experience.
 
-## Closely followed the pillars of GOOD HTML and CSS
+## Architecture
 
-### Responsive design
+The frontend mockup of the Trillo project uses the following technologies and best practices:
 
-- Fluid grids and layouts - to allow content to easily adapt to the current viewport width used to browse the website
-- Media queries - to change styles on certain viewport widths (breakpoints), allowing us to create different version of our website for different widths
-- Responsive/Flexible images - images behave differently than text content, and so we need to ensure that they also adapt nicely to th current viewport
-- Correct units
-- Mobile-first VS Desktop-first
-- Progressive enhancement VS Graceful degradation
+- Scss preprocessor: Scss is used to write more efficient and maintainable CSS code.
+- Flexbox Layout: Flexbox layout is implemented for cross-browser compatibility and responsive design.
+- Object Oriented Programming in JavaScript: The JavaScript code is organized using Object Oriented Programming principles, making it easier to read, maintain, and extend.
+- Component-based development: The front-end is built using a component-based approach, which promotes reusability and makes it easier to manage complex UIs.
+- '7-1 Pattern' folder structure: The folder structure follows the '7-1 Pattern' to organize partial Scss files and promote maintainability.
+- BEM for CSS class naming convention and architecture: BEM (Block Element Modifier) is used to name and structure CSS classes in a way that is easy to read and maintain.
+- DRY coding principles: Don't Repeat Yourself (DRY) coding principles are followed to promote code reusability and reduce redundancy.
 
-#### Mobile-First PROS & CONS
+## Infrastructure
 
-##### PROS
+The Trillo project will use the following infrastructure:
 
-- 100% optimized for mobile experience;
-- reduces websites and aps to the absolute essentials;
-- results in smaller, faster and more efficient products;
-- prioritizes content over aesthetic design, which may be desirable;
+- Version control system: Git will be used to manage the project's source code and version control.
+- Hosting: The final version of the application will be hosted on Amazon Web Services (AWS).
+- CI/CD: The continuous integration and deployment process will be automated using GitHub Actions, making it faster and more reliable.
 
-##### CONS
+## Tech Stack
 
-- the desktop version might feel overly empty and simplistic;
-- more difficult and counterintuitive to develop;
-- less creative freedom, making it more difficult to create distinctive products;
-- clients are used to see a desktop version of the sire as a prototype;
-- do our users even use the mobile internet? what is the purpose se of the website?
+The Trillo project will use the following technologies:
 
-#### Responsive / Flexible images
+- Markup and Templating: HTML, Handlebars
+- Styles and Layout: CSS, Sass/Scss
+- User Experience: JavaScript, React
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Hosting: Amazon Web Services (AWS)
+- CI/CD: GitHub Actions, Git
 
-> the goal of responsive images is to serve **right image** to the **right screen size** and device, in order o avoid downloading unnecessary large images on smaller screens
+## System Design
 
-##### When to use Responsive images
+The final version of the Trillo project will use the MERN (MongoDB, Express, React, Node.js) stack, which is a popular and powerful technology stack for building modern web applications. The project will use Amazon Web Services (AWS) to host the application and AWS CodePipeline to automate the continuous integration and deployment process.
 
-- Resolution switching - decrease image resolution on smaller screens;
-- Density switching - half the image resolution on `@1x` screen (low res) and full image resolution `@2x` screen (high res);
-- Art direction - different image on smaller screen - in this case you only want to show specific details of the image without (cropping the image in pre-production stages);
+## Post-MVP Improvements
 
-### Maintainable and scalable code
+### Functional Improvements:
 
-- Clean
-- Easy-to-understand and modular
-- Ready for growth
-- Reusable
-- HOW to organize files
-- How to name classes
-- How to structure HTML
+- Integration with third-party APIs to provide more accurate pricing and availability information for travel services.
+- Addition of a reviews section to showcase user experiences and promote the Trillo brand.
+- Integration with a payment gateway to allow customers to securely and easily pay for their bookings.
 
-#### Think - Build - Architect Mindset
+### Non-Functional Improvements:
 
-##### Think
+- Optimization of images and other media to improve page loading times.
+- Implementation of lazy loading and other performance optimizations to improve page speed.
+- Implementation of accessibility best practices to ensure the website is usable by people with disabilities.
 
-**Think** about the layout of your webpage or web app before writing code.
-**Component-Driven Design**
+## Conclusion
 
-- **Modular building blocks** that make up interfaces
-- Held together by the **layout** of the page
-- **Re-usable** across a project, and between different projects
-- **Independent**, allowing us to use them anywhere on the page
-  > this "Component-Driven Design" is very similar to the "Atomic Design" philosophy and strategy of Brad Frost (Organisms are the corespondent of Components)
-
-##### Build
-
-- **Build** your layout in HTML and CSS with a consistent structure for naming classes.
-  **BEM**
-
-* **B**lock **E**lement **M**odifier
-* **BLOCK**: standalone component hat is meaningful on its own
-* **ELEMENT**: part of a block hat has no standalone meaning
-* **MODIFIER**: a different version of a block or an element
-* **BEM** is easy to maintain, reusable and helps maintain a low specificity
-* `block__element--modifier {} `
-
-##### Architect
-
-- Create a logical **architecture** for you CSS and JS with files and folders.
-  > there are several CSS architecture patterns like ITCSS, SMACSS, OOCSS or 7-1 Pattern
-- **The 7-in-1 Pattern**
-
-* 7 different folders for partial Sass/Less/Stylus files, ad 1 main file to import all other files into a compiled CSS stylesheet
-
-### Web performance
-
-- Less HTTP requests
-- Less considered
-- Compress code
-- Use a CSS preprocessor
-- Less images
-- Compress images
+The Trillo project is a well-designed and well-architected All-in-One Booking App that will provide a seamless booking experience for users who want to book multiple travel services in one platform. The project will use modern technologies and best practices in web development to provide a high-quality user experience. With the use of the MERN stack and AWS infrastructure, the Trillo project can become an even more successful and effective platform for booking travel services.
