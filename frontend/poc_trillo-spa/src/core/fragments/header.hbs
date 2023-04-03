@@ -1,0 +1,25 @@
+<header class="header__base">
+  <img src="./public/icons/logo.png" alt="trillo logo" class="header__logo">
+
+  <form action="#" class="search__base">
+    <input class="search__input" type="text" placeholder="Search hotels">
+    <button class="search__button">
+      <span class="search__icon inline-svg"> {{> public/svgs/magnifying-glass}}</span>
+    </button>
+  </form>
+
+  <nav class="user-nav__base">
+    <div class="user-nav__icon-box">
+      <span class="user-nav__icon inline-svg">{{> public/svgs/bookmark}}</span>
+      <span class="user-nav__notification">7</span>
+    </div>
+    <div class="user-nav__icon-box">
+      <span class="user-nav__icon inline-svg">{{> public/svgs/chat}}</span>
+      <span class="user-nav__notification">13</span>
+    </div>
+    <div class="user-nav__user">
+      <img src="./public/images/user-original.webp" alt="user photo" class="user-nav__user-photo">
+      <span class="user-nav__user-name">Paul</span>
+    </div>
+  </nav>
+</header>
