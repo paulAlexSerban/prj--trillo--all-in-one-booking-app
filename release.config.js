@@ -1,6 +1,6 @@
 module.exports = {
   branches: "release",
-  repositoryUrl: "https://github.com/paulAlexSerban/prj--trillo-all-in-one-booking-app--spa",
+  repositoryUrl: "https://github.com/paulAlexSerban/prj--trillo--all-in-one-booking-app",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
