@@ -44,6 +44,9 @@ module.exports = {
 				use: [
 					{
 						loader: "handlebars-loader",
+						options: {
+							rootRelative: path.join(constants.SRC_DIR, "/"),
+						}
 					},
 				],
 			},
@@ -83,7 +86,7 @@ module.exports = {
 		}),
 		// generate HTML file using *.hbs files as source
 		new HtmlWebpackPlugin({
-			title: "Landing Page",
+			title: "POC | Trillo - All in One Booking App",
 			template: path.join(constants.SRC_DIR, "pages", "index.hbs"),
 			filename: path.join(constants.DIST_DIR, "index.html"),
 			inject: false,

@@ -1,5 +1,7 @@
-{{> ../fragments/navigation}}
-{{> ../fragments/header}}
-{{> ../fragments/main}}
-{{> ../fragments/footer}}
-{{> ../library/popup}}
+<div class="container__base">
+  {{> core/fragments/header}}
+  <div class='content__base'>
+    {{> core/library/patterns/sidenav}}
+    {{> core/fragments/main}}
+  </div>
+</div>
