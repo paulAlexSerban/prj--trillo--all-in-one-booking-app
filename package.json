@@ -1,7 +1,6 @@
 {
   "name": "prj--trillo--all-in-one-booking-app",
-  "version": "1.0.0",
-  "author": "Paul Serban",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
