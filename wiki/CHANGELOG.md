@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/paulAlexSerban/prj--trillo--all-in-one-booking-app/compare/v1.1.0...v1.1.1) (2023-08-08)
+
+
+### Bug Fixes
+
+* adjustments ([37204d9](https://github.com/paulAlexSerban/prj--trillo--all-in-one-booking-app/commit/37204d91016ef9036a75f51a454eef9d2de229f6))
+* adjustments ([e3a1d84](https://github.com/paulAlexSerban/prj--trillo--all-in-one-booking-app/commit/e3a1d84336ee36dfa7ae0f7d184cf3489d36051f))
+
 # [1.1.0](https://github.com/paulAlexSerban/prj--trillo--all-in-one-booking-app/compare/v1.0.0...v1.1.0) (2023-04-03)
 
 
