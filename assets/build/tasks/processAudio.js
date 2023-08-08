@@ -14,11 +14,11 @@ const logger = createLogger({
   ],
 });
 
-export const processSvgs = () => {
-  logger.info("Starting SVG processing");
+export const processAudio = () => {
+  logger.info("Starting audio processing");
 
   return new Promise((resolve, reject) => {
-    return src(paths.src.assets.svgs)
+    return src(paths.src.assets.audio)
       .pipe(
         plumber({
           errorHandler: onError,
@@ -26,18 +26,18 @@ export const processSvgs = () => {
       )
       .pipe(
         size({
-          title: "processSvgs : ",
+          title: "processAudio : ",
           showFiles: true,
           showTotal: true,
         })
       )
-      .pipe(dest(`${paths.dist.dir}/svgs`))
+      .pipe(dest(`${paths.dist.dir}/audio`))
       .on("error", (err) => {
-        logger.error(`Error processing SVGs: ${err}`);
+        logger.error(`Error processing audio: ${err}`);
         reject(err);
       })
       .on("end", () => {
-        logger.info("Finished SVG processing");
+        logger.info("Finished audio processing");
         resolve();
       });
   });
